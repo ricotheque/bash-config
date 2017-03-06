@@ -19,8 +19,12 @@ then
 	# Configure TMUX
 	# @link   https://blog.htbaa.com/news/tmux-scripting
 	
+	# Create session
 	SESSION=$USER
 	tmux new-session -d -s $SESSION
+	
+	# Change the color of the active pane
+	# @link   http://stackoverflow.com/questions/25532773/change-background-color-of-active-or-inactive-pane-in-tmux
 	tmux set -g window-style 'fg=colour247,bg=colour240'
 	tmux set -g window-active-style 'fg=colour250,bg=black'
 
